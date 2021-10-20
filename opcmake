@@ -1,0 +1,17 @@
+#!/bin/bash
+#====================================================
+# SCRIPT: ELH SERVER QUICK DEPLOY V 1
+# DEVELOPED BY: MONOXOFIGHTER
+# UPDATE DATE: 2021.10.20
+# TELEGRAM CONTACT: HTTPS://T.ME/ELH_NETWOXCLOUD_LIVE_USER 
+# THIS REPO SPECIALLY MADE FOR ELH.NETWOXCLOUD SERVERS.
+#====================================================
+
+sleep 5s
+sudo apt update && sudo apt upgrade -y && sudo apt-get install firewalld -y && sudo firewall-cmd --zone=public --permanent --add-port=443/tcp && sudo firewall-cmd --zone=public --permanent --add-port=80/tcp && sudo firewall-cmd --zone=public --permanent --add-port=8080/tcp && sudo firewall-cmd --zone=public --permanent --add-port=7300/tcp && sudo firewall-cmd --zone=public --permanent --add-port=22/tcp && sudo firewall-cmd --zone=public --permanent --add-port=110/tcp && sudo firewall-cmd --zone=public --permanent --add-port=54321/tcp && sudo firewall-cmd --zone=public --permanent --add-port=9090/tcp && sudo firewall-cmd --zone=public --permanent --add-port=10000/tcp && sudo firewall-cmd --reload
+sudo apt install speedtest-cli
+sudo apt-get install cockpit -y 
+sudo timedatectl set-timezone Asia/Colombo
+sudo apt autoremove -y && sudo sh -c 'echo "sudo apt autoremove -y" >> /etc/cron.monthly/autoremove' && sudo chmod +x /etc/cron.monthly/autoremove
+sudo apt update && sudo apt install wget apt-transport-https software-properties-common -y && wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] http://download.webmin.com/download/repository sarge contrib" && sudo apt install webmin -y
+
