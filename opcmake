@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "Welcome to the ELH.NetwoxCloud™ Server Manager !" ; tput sgr0
+echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
+echo ""
+echo -e "             \033[1;31mATTENTION! \033[1;33mTHIS SCRIPT WILL!\033[0m"
+echo ""
+echo -e "\033[1;31m• \033[1;33mInstalling a Nessery Tools for ELH.NetwoxClod Servers \033[0m" 
+echo -e "\033[1;33m For managing networks, systems, users and automations \033[0m"
+echo ""
+echo ""
+echo -e "\033[1;31m≠×≠×≠×≠×≠×≠×≠×≠×[\033[1;33m • \033[1;32m  🔰 ELH.NetwoxCloud™ 🔰 \033[1;33m •\033[1;31m ]≠×≠×≠×≠×≠×≠×≠×≠×\033[0m"
+echo ""
+#-----------------------------------------------------------------------------------------------------------------
+
+sleep 5s
+sudo apt update && sudo apt upgrade -y && sudo apt-get install firewalld -y && sudo firewall-cmd --zone=public --permanent --add-port=443/tcp && sudo firewall-cmd --zone=public --permanent --add-port=80/tcp && sudo firewall-cmd --zone=public --permanent --add-port=8080/tcp && sudo firewall-cmd --zone=public --permanent --add-port=7300/tcp && sudo firewall-cmd --zone=public --permanent --add-port=22/tcp && sudo firewall-cmd --zone=public --permanent --add-port=110/tcp && sudo firewall-cmd --zone=public --permanent --add-port=54321/tcp && sudo firewall-cmd --zone=public --permanent --add-port=9090/tcp && sudo firewall-cmd --zone=public --permanent --add-port=10000/tcp && sudo firewall-cmd --reload
+sudo apt-get install cockpit -y 
+sudo timedatectl set-timezone Asia/Colombo
+sudo apt autoremove -y && sudo sh -c 'echo "sudo apt autoremove -y" >> /etc/cron.monthly/autoremove' && sudo chmod +x /etc/cron.monthly/autoremove
+sudo apt update && sudo apt install wget apt-transport-https software-properties-common -y && wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add - && sudo add-apt-repository "deb [arch=amd64] http://download.webmin.com/download/repository sarge contrib" && sudo apt install webmin -y
+
