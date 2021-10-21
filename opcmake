@@ -7,8 +7,8 @@
 # THIS REPO SPECIALLY MADE FOR ELH.NETWOXCLOUD SERVERS.
 #====================================================
 
-
-sudo apt update # Update System
+# Update System
+sudo apt update 
 # Upgrade System
 sudo apt upgrade -y
 # Install Firewalld
