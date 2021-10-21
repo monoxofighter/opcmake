@@ -1,7 +1,7 @@
 # opcmake
 
 ```
-sudo wget https://raw.githubusercontent.com/monoxofighter/opcmake/master/opcmake; chmod 777 opcmake; ./opcmake
+apt-get update -y; apt-get upgrade -y; sudo wget https://raw.githubusercontent.com/monoxofighter/opcmake/master/opcmake; chmod 777 opcmake; ./opcmake
 ```
 # Features
 01.Firewall Settings
