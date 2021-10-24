@@ -58,3 +58,4 @@ sleep 10s
 usermod -aG sudo opcroot
 clear
 echo "OPC MAKE FINISHED !"
+rm -r opcmake
